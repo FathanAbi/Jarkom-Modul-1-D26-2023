@@ -58,6 +58,16 @@ screenshot:
 
 
 # 3
+Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
+a. Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
+
+
+
+menggunakan filter ip.addr == 239.255.255.250 && udp.port == 3702 pada display filter wireshark untuk mengambil paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702.
+
+b. Protokol layer transport apa yang digunakan?
+Dapat dilihat pada bagian kolom protocol berdasarkan filter di bagian a, yang digunakan adalah UDP.
+
 
 # 4
 Berapa nilai checksum yang didapat dari header pada paket nomor 130?
@@ -73,7 +83,35 @@ screenshot:
 
 # 5
 # 6
+Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+
+Jika dilihat pada soal, ada kejanggalan pada huruf besar di beberapa kata, yaitu:
+
+- Seorang
+- Udin
+- Berteman
+- Slamet
+- Teman
+- Ia
+- Terjadi
+- Udin
+- Sebuah
+- Invalid
+Jika diambil huruf kapitalnya saja maka terdapat hint SUBSTITUSI
+
+Kemudian pada kalimat “hasil pencarian hanya menampilkan a1 e5 u21”. Jika dilihat pada bagian “a1 e5 u21”, ini merupakan enkripsi huruf-angka, yaitu
+a = 1
+e = 5
+u = 21
+
+Berdasarkan pernyataan "server SOURCE ADDRESS 7812 is invalid", cari packet nomor 7812 dengan display filter frame.number == 7812 dan jika diperhatikan, tulisan source address ditulis capslock sehingga catat IP source address pada packet nomor 7812, yaitu 104.18.14.101.
+
+104.18.14.101 → 0-18 → 10 4 18 14 10 1 → J D R N J A
+
+
 # 7 
 # 8
 # 9 
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+Dengan menggunakan display capture ip.src == 10.51.40.1 && ip.dst != 10.39.55.34 sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34.
 # 10
