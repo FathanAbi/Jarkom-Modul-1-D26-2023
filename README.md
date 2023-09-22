@@ -80,8 +80,54 @@ screenshot:
 ## flag
 ![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/3842942a-7ca5-49e9-864d-45b7bc5d823b)
 
+# 5 (REVISI)
+Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
 
-# 5
+sebelum mengerjakan soal, perlu dicari command nc agar dapat menjawab soal. pertama buka file pcap dan follow tcp stream. pada hasil follow ditemukan password yang ter-encode dalam base64. lakukan decoding untuk mendapat password sebenarmya. kemudian gunakan password untuk membuka file secret.txt untuk mendapatkan command nc
+
+screenshot password:
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/baf35c98-bf55-48cb-98ae-56aa94212bee)
+
+screenshot hasil encoding:
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/c5ba2303-6c89-4e92-a250-8ac64446c2c6)
+
+screenshot isi file secret.txt
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/cb75ec3d-b7cb-4072-b60b-b983f32e184b)
+
+
+## Poin A
+Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+
+pada file pcap, dapat dilihat terdapat 60 paket yang dicapture
+screenshot:
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/5395bbc8-7d4f-4dd8-8248-dc9cdfdc601f)
+
+## Poin B
+Port berapakah pada server yang digunakan untuk service SMTP?
+
+dengan menggunakan filter “SMTP”. lalu pilih paket didapat port yang digunakan adalah port 25
+
+screenshot:
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/e29fa8e4-0af7-4571-95bc-2305b7f4508a)
+
+
+## Poin C
+Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+
+berdasarkan informasi pada (https://www.avast.com/c-ip-address-public-vs-private) didapet private ip adalah ip yang berada di range:
+*	Class A: 10.0.0.0 — 10.255.255.255
+*	Class B: 172.16.0.0 — 172.31.255.255 
+*	Class C: 192.168.0.0 — 192.168.255.255
+
+dari file pcap diatas didapat yang merupakan public ip adalah 74.53.140.153
+
+screenshot:
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/6b3b5954-f38e-4de1-9988-917eef8518b9)
+
+## flag
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/11bbe41e-be3e-4b29-a6d2-6e533fcaa7e6)
+
+
 # 6
 Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
@@ -110,8 +156,31 @@ Berdasarkan pernyataan "server SOURCE ADDRESS 7812 is invalid", cari packet nomo
 
 
 # 7 
-# 8
-# 9 
+
+# 8 (REVISI)
+Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+
+menggunakan tcp.dstport == 80, untuk menampilkan paket dengan protokol tcp yang menuju port 80, menggunakan udp.dtsport == 80 untuk menampilkan paket dengan protokol udp yang menuju port 80. menggunakan konjugasi or (||) untuk menggabungkan keduanya
+
+## flag
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/4ce8d775-73fd-49e4-8e9d-b23fef780450)
+
+# 9 (REVISI)
 Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
-Dengan menggunakan display capture ip.src == 10.51.40.1 && ip.dst != 10.39.55.34 sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34.
-# 10
+
+menngunakan ip.src == 10.51.40.1 untuk menampilkan paket yang berasal dari alamat 10.51.40.1. kemudian menngunakan ip.dst == 10.39.55.34 untuk membuat pengecualian dari paket yang berasal dari alamat 10.39.55.34
+
+## flag
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/862cc287-9d99-4370-b925-10dc783c8a6e)
+
+# 10 (REVISI)
+Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+
+gunakan filter “telnet” untuk mencari paket dengan protokol telnet. lalu cari paket yang terdapat Login: dan Password: . kemudian follow tcp stream. didapat Login:dhafin dan Password:kesayangannyak0k0. sehinnga kredensialnya adalah dhafin:kesayangannyak0k0
+
+screenshot:
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/a01c3d74-4a6b-4f2a-9e9d-e0533ce2ab04)
+
+## flag
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/ca9007db-2aa7-4cd5-9f06-0d1fc8a8261b)
+
