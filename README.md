@@ -182,3 +182,16 @@ screenshot:
 ## flag
 ![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/ca9007db-2aa7-4cd5-9f06-0d1fc8a8261b)
 
+
+# Kendala Yang Dialami
+## general
+kendala internet. VPN ITS lemot, sehingga tidak dapat mengerjakan dengan maksimal
+## no 3
+Terdapat beberaka checksum yang berbeda, sehingga harus mencoba satu per satu
+## n0 8
+Terdapat kendala dalam memahami soal. Saya berpikir mengambil artinya adalah mencapture sehingga sempat menggunakan syntax capture filter, bukan display filter
+## no 9 
+sama seperti no 8
+## no 10
+terdapat kredensial yang menjebak, dan saat ketemu yang asli menggunakan username ddhhaaffiinn, bukan dhafin
+
