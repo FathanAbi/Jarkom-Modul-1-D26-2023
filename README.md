@@ -40,6 +40,10 @@ Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari ak
 
 dengan cara yang sama dengan poin c, dapat ditemukan acknowledge number (raw) nya, yaitu 258040696
 
+## flag
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/6c7332c9-2b4d-4c46-b1fa-a2b95919ba85)
+
+
 # 2
 
 Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
@@ -49,15 +53,23 @@ karena portal praktikum jaringan komputer menggunakn protokol http, gunakan filt
 screenshot:
 ![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/8a78818c-b8bd-44df-bc94-0278a8a9094a)
 
+## flag
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/d2d82e15-f913-465d-9b57-81699c9f8b1d)
+
+
 # 3
 
 # 4
 Berapa nilai checksum yang didapat dari header pada paket nomor 130?
 
-pada file pcap, pilih paket dengan nomor 130. didalamnya terdapat informasi tentang nilai checksum paket.
+pada file pcap, pilih paket dengan nomor 130. didalamnya terdapat informasi tentang nilai checksum paket, yaitu 0x18e5
 
 screenshot:
 ![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/2d16ccc4-78ab-47bf-ae18-d9a0c5f094bb)
+
+## flag
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/3842942a-7ca5-49e9-864d-45b7bc5d823b)
+
 
 # 5
 # 6
