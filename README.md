@@ -65,6 +65,10 @@ menggunakan filter ip.addr == 239.255.255.250 && udp.port == 3702 pada display f
 b. Protokol layer transport apa yang digunakan?
 Dapat dilihat pada bagian kolom protocol berdasarkan filter di bagian a, yang digunakan adalah UDP.
 
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/222dda7c-a866-4bd6-abe8-3e8739af370b)
+
+
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/78a586f7-d478-4547-9af8-05ecefd46b6b)
 
 # 4
 Berapa nilai checksum yang didapat dari header pada paket nomor 130?
@@ -152,8 +156,18 @@ Berdasarkan pernyataan "server SOURCE ADDRESS 7812 is invalid", cari packet nomo
 
 104.18.14.101 → 0-18 → 10 4 18 14 10 1 → J D R N J A
 
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/479f690b-27a3-4afd-9bec-63590262e3e6)
+
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/e7c0690f-62b7-4d5b-9451-86e14e8c5f0d)
+
 
 # 7 
+
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/82c69e30-ce85-4e1a-b450-925f2ca2d36f)
+
+
+![image](https://github.com/FathanAbi/Jarkom-Modul-1-D26-2023/assets/90834092/c04aa424-eba6-4b9f-95eb-a7f4bab78278)
+
 
 # 8 (REVISI)
 Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
